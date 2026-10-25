@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 20</title>
+</head>
+<body>
+    <script>
+        // let a= function(){
+        //     console.log('Hello welcome to the page')
+        // }
+        // a()
+        // // let sum=a=>a+a
+        // // console.log(sum(2))
+        // (function(){
+        //     console.log('Hello')
+        // })()
+
+        // function cart(callback){
+        //     console.log('Products added to cart')
+        //     callback(order)
+        // }
+        // function payment(callback){
+        //     console.log('payment Completed')
+        //     callback()
+        // }
+        // function order(){
+        //     console.log('Order placed')
+        // }
+        // cart(payment)
+    function outer(){
+        let c=0
+        console.log('Outer function is executed')
+        return function(){
+            c++
+            console.log('Inner function is executed')
+            console.log(c)
+        }
+    }
+    let a=outer()
+    a()
+    a()
+    </script>
+</body>
+</html>
